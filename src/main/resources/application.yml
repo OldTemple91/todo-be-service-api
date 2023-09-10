@@ -1,0 +1,54 @@
+spring:
+  application:
+    name: todo-be-service-api
+
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/todo
+    username: root
+    password: consider753
+    hikari:
+      auto-commit: false
+      pool-name: todo-api-pool
+      minimum-idle: 5
+      maximum-pool-size: 10
+      connection-timeout: 30000
+      connection-test-query: select 1
+      max-lifetime: 1800000
+      idle-timeout: 30000
+      data-source-properties:
+        cachePrepStmts: true
+        prepStmtCacheSize: 250
+        prepStmtCacheSqlLimit: 2048
+        useServerPrepStmts: true
+  jpa:
+    hibernate.ddl-auto: none
+    show-sql: true
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+        default_batch_fetch_size: 100
+
+  jackson:
+    default-property-inclusion: always
+    serialization:
+      indent-output: true
+    date-format: com.fasterxml.jackson.databind.util.StdDateFormat
+    time-zone: Asia/Seoul
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+
+server:
+  port: 8080
+  error:
+    whitelabel.enabled: false
+  tomcat:
+    max-http-form-post-size: 10MB
+
+jwt:
+  secret: WqqCX1GwJyLiCt3pNVbCOLQySl505DhC
