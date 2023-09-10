@@ -12,7 +12,7 @@ Kotlin, Spring boot, Spring Data JPA, QueryDSL, MySQL
 MySQL 테이블 생성 쿼리와 포스트맨 API을 첨부하였습니다. 살펴보시고 생성 및 실행 해주시면 감사하겠습니다.  
 - 데이터베이스 생성: **create database todo**
 - 테이블 생성 쿼리: sql 폴더 - todo.ddl 참조
-- 포스트맨 API: 첨부파일 참조
+- 포스트맨 API: 이메일 첨부파일 참조
 - 유닛 테스트: test 폴더 참조(회원, Todo List 테스트)
 
 ### 서비스 부연 설명
